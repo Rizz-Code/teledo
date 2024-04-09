@@ -55,7 +55,9 @@ def add_account_next_step_handler(m: Message):
             remarks = ''
 
         try:
-            email = remarks
+            email = digitalocean.Account().get_object(
+                api_token=token
+            ).email
 
             AccountsDB().save(
                 email=email,
