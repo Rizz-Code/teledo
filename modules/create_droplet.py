@@ -284,7 +284,8 @@ def cancel_create(call: CallbackQuery):
 
 def confirm_create(call: CallbackQuery, data: dict):
     droplet_name = data['name'][0]
-    password = password_generator()
+    # password = password_generator()
+    password = "Sabde1Store"
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n\n'
